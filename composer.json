@@ -1,0 +1,31 @@
+{
+    "name" : "digitalkaoz/container-checker",
+    "type": "library",
+    "description": "Symfony2 DI-Container Checker",
+    "keywords": ["Symfony2", "DIC", "Debug"],
+    "homepage": "https://github.com/digitalkaoz/container-service-checker",
+    "license": "MIT",
+
+    "authors": [
+        {"name": "robert Schönthal", "email": "seroscho@gmail.com"}
+    ],
+
+    "require" : {
+        "symfony/console" :             "*",
+        "symfony/http-foundation" :     "*"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "rs\\ContainerServiceChecker" : "src"
+        }
+    },
+
+    "bin": [
+        "bin/checker.php"
+    ],
+
+    "extra": {
+        "bin-dir" : "bin"
+    }
+}
