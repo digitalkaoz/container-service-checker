@@ -21,8 +21,12 @@ or edit your `composer.json` manually:
 Usage
 -----
 
+You can check **services** or **parameters** of your DI-Container. Services will be checked if they could be *getted* from the Container.
+Parameters which looks like ClassNames will be checked if they can be autoloaded.
 
-*Check Instanciation of all Container Services*
+Here are a few use cases:
+
+**Check Instanciation of all Services**
 
 ```
 $ bin/checker.php check:services path/to/your/AppKernel.php
@@ -35,8 +39,7 @@ $ bin/checker.php check:services path/to/your/AppKernel.php -env=prod --scope=re
 ```
 
 
-
-*Check all Container Parameters which are Class-Names to be autoloadable*
+**Check if all Parameters which are Class-Names can be autoloaded**
 
 ```
 $ bin/checker.php check:parameters path/to/your/AppKernel.php
@@ -59,5 +62,6 @@ TODO
 * some tests
 * grep the autoloader of the loaded Kernel and ask there for a autoloadable class insteat of `class_exists`
 * some more sanity checks
+* Portable for other Containers (e.g. ZendDI)
 
 
